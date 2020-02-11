@@ -1,0 +1,14 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  },
+  "scripts": {
+    "client":"cd client && yarn start",
+    "server":"FLASK_APP=server flask run",
+    "start": "concurrently \"yarn client\" \"yarn server\" "
+  }
+}
