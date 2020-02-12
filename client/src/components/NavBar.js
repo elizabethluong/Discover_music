@@ -17,7 +17,10 @@ function Navbar() {
                 />
               </Link>
             </a>
-            <span className="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span
+              className="navbar-burger burger"
+              data-target="navbarMenuHeroA"
+            >
               <span></span>
               <span></span>
               <span></span>

@@ -24,7 +24,8 @@ export default class App extends Component {
       playlists: [],
       genres: [],
       selectGenres: "",
-      returnTracks: []
+      returnTracks: [],
+      loggedIn: false
     };
   }
 
@@ -42,7 +43,7 @@ export default class App extends Component {
       .get(`http://127.0.0.1:5000/get_tracks/${token}/${genre}`)
       .then(response => {
         // console.log(response.data);
-        this.setState({returnTracks: response.data.tracks});
+        this.setState({ returnTracks: response.data.tracks });
       })
       .catch(err => {
         console.log(err);
@@ -118,18 +119,20 @@ export default class App extends Component {
     return (
       <div className="App">
         <Router className="App">
-          <NavBar />
           <Switch>
             <Route exact path="/">
               <Hero />
               <Login />
             </Route>
+
             <Route path="/homepage">
+              <NavBar />
               <Hero />
               <Genre />
               <Artists />
             </Route>
             <Route path="/user_profile">
+              <NavBar />
               <Hero />
               <GenreDropDown />
               <ArtistList />
@@ -143,45 +146,6 @@ export default class App extends Component {
             </Route>
           </Switch>
         </Router>
-        {this.state.name ? (
-          <h1>
-            Hi {this.state.name} from {this.state.country}
-          </h1>
-        ) : null}
-        <div className="Lists">
-          {this.state.playlists.length > 1
-            ? this.state.playlists.map(item => (
-              <div
-                className="container backImage"
-                style={{
-                  backgroundImage: `url(${item.images.map(i => i.url)})`
-                }}
-                key={item.id}
-              ></div>
-            ))
-            : null}
-        </div>
-        <div className="Genres">
-          <form onSubmit={this.onSumbitHandler}>
-            <input
-              type="text"
-              className="input is-danger input is-large"
-              list="data"
-              onChange={this.onChangeHandler}
-            />
-            <input type="submit" value="Submit" />
-          </form>
-
-          <datalist id="data">
-            {this.state.genres.length > 1
-              ? this.state.genres.map((genre, key) => (
-                <div>
-                  <option key={key} value={genre} /> )}
-                  </div>
-              ))
-              : null}
-          </datalist>
-        </div>
       </div>
     );
   }
