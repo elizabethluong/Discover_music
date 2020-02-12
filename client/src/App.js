@@ -9,12 +9,14 @@ import Genre from "./components/genre";
 import Artists from "./components/artists";
 import GenreDropDown from "./components/GenreDropDown";
 import ArtistList from "./components/ArtistList";
+import UserInfo from "./containers/userInfo";
+import Playlist from "./components/playlist";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 
 export default class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     const params = this.getHashParams();
     const id = params.id;
     this.state = {
@@ -34,7 +36,7 @@ export default class App extends Component {
     this.setState({ selectGenres: event.target.value });
   };
 
-  onSumbitHandler = event => {
+  onSubmitHandler = event => {
     event.preventDefault();
     let genre = this.state.selectGenres;
     const params = this.getHashParams();
@@ -125,10 +127,16 @@ export default class App extends Component {
               <Login />
             </Route>
 
-            <Route path="/homepage">
+            <Route path="/dash/*">
               <NavBar />
               <Hero />
-              <Genre />
+              <Playlist playlists={this.state} />
+              <Genre
+                state={this.state}
+                addGenre={this.onSubmitHandler}
+                typeGenre={this.onChangeHandler}
+              />
+              <UserInfo state={this.state} />
               <Artists />
             </Route>
             <Route path="/user_profile">
