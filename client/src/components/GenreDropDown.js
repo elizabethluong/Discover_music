@@ -4,9 +4,9 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 function GenreDropDown() {
   return (
     <div className="genreDropDown">
-      <div class="field">
-        <div class="control">
-          <div class="select is-danger">
+      <div className="field">
+        <div className="control">
+          <div className="select is-danger">
             <select>
               <option>Select dropdown</option>
               <option>With options</option>

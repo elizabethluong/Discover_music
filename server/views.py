@@ -156,7 +156,7 @@ def get_tracks(token, genre):
     #Use the access token to access Spotify API
     authorization_header = {"Authorization": "Bearer {}".format(access_token)}      
     # Get genre data
-    tracks_end_point = "https://api.spotify.com/v1/recommendations?seed_genres=british"
+    tracks_end_point = "https://api.spotify.com/v1/recommendations?seed_genres={}".format(genre)
     tracks_endpoint_response = requests.get(tracks_end_point, headers=authorization_header)
     tracks_data = json.loads(tracks_endpoint_response.text)
     return jsonify(tracks_data)

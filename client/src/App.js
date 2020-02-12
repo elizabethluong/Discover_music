@@ -35,19 +35,19 @@ export default class App extends Component {
 
   onSumbitHandler = event => {
     event.preventDefault();
-    let genre = this.state.trackGenres;
+    let genre = this.state.selectGenres;
     const params = this.getHashParams();
     const token = params.code;
     axios
       .get(`http://127.0.0.1:5000/get_tracks/${token}/${genre}`)
       .then(response => {
-        console.log(response.data.seeds);
-        // this.setState({returnTracks: response.data});
+        // console.log(response.data);
+        this.setState({returnTracks: response.data.tracks});
       })
       .catch(err => {
         console.log(err);
       });
-    alert("Getting tracks!");
+    // alert("Getting tracks!");
     event.preventDefault();
   };
 
@@ -151,21 +151,21 @@ export default class App extends Component {
         <div className="Lists">
           {this.state.playlists.length > 1
             ? this.state.playlists.map(item => (
-                <div
-                  className="container backImage"
-                  style={{
-                    backgroundImage: `url(${item.images.map(i => i.url)})`
-                  }}
-                  key={item.id}
-                ></div>
-              ))
+              <div
+                className="container backImage"
+                style={{
+                  backgroundImage: `url(${item.images.map(i => i.url)})`
+                }}
+                key={item.id}
+              ></div>
+            ))
             : null}
         </div>
         <div className="Genres">
           <form onSubmit={this.onSumbitHandler}>
             <input
               type="text"
-              class="input is-danger input is-large"
+              className="input is-danger input is-large"
               list="data"
               onChange={this.onChangeHandler}
             />
@@ -175,11 +175,10 @@ export default class App extends Component {
           <datalist id="data">
             {this.state.genres.length > 1
               ? this.state.genres.map((genre, key) => (
-                  <div>
-                    {/* <a href="" key={genre}>{genre}</a> */}
-                    <option key={key} value={genre} /> )}
+                <div>
+                  <option key={key} value={genre} /> )}
                   </div>
-                ))
+              ))
               : null}
           </datalist>
         </div>

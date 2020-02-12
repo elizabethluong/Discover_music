@@ -5,7 +5,7 @@ function Genre() {
   return (
     <div className="genre">
       <input
-        class="input is-danger input is-large"
+        className="input is-danger input is-large"
         type="text"
         placeholder="Search Genre"
       ></input>
