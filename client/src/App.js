@@ -44,7 +44,7 @@ export default class App extends Component {
     axios
       .get(`http://127.0.0.1:5000/get_tracks/${token}/${genre}`)
       .then(response => {
-        // console.log(response.data);
+        console.log(response);
         this.setState({ returnTracks: response.data.tracks });
       })
       .catch(err => {

@@ -4,19 +4,19 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 
 export default function Genre(props) {
   let genres = props.state.genres;
-  let addGenre = props.addGenre;
-  let typeGenre = props.typeGenre.onChangeHandler;
+  let aGenre = props.addGenre
+  let tGenre = props.typeGenre
 
   console.log({ props });
  
   return (
     <div className="Genres">
-      <form onSubmit={() => addGenre}>
+      <form onSubmit={(event) => aGenre(event)}>
         <input
           type="text"
           className="input is-danger input is-large"
           list="data"
-          onChange={() => typeGenre}
+          onChange={(event) => tGenre(event)}
         />
         <input type="submit" value="Submit" />
       </form>
@@ -33,3 +33,5 @@ export default function Genre(props) {
     </div>
   );
 }
+
+
