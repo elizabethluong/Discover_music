@@ -3,6 +3,7 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 
 export default function Genre(props) {
   let genres = props.state.genres;
+  let inVal = props.state.selectGenres
   let aGenre = props.addGenre;
   let tGenre = props.typeGenre;
 
@@ -14,6 +15,7 @@ export default function Genre(props) {
         <input
           type="text"
           className="input is-danger input is-large"
+          value={inVal}
           list="data"
           placeholder="Search genre"
           onChange={event => tGenre(event)}

@@ -45,13 +45,14 @@ export default class App extends Component {
       .get(`http://127.0.0.1:5000/get_tracks/${token}/${genre}`)
       .then(response => {
         console.log(response);
-        this.setState({ returnTracks: response.data.tracks });
+        this.setState({ returnTracks: response.data.tracks, selectGenres: "" });
       })
       .catch(err => {
         console.log(err);
       });
     // alert("Getting tracks!");
-    event.preventDefault();
+    // let genreInput = event.target.value = ""
+
   };
 
   getHashParams() {
