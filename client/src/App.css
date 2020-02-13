@@ -14,6 +14,15 @@
 input[type="text"] {
   text-align: center;
 }
+input[type="submit"]:hover {
+  color: white;
+  background: #2653c4;
+}
+
+p {
+  font-size: 16px;
+  color: black;
+}
 
 input[type="submit"] {
   border-radius: 5px;
@@ -29,7 +38,8 @@ input[type="submit"] {
   margin: 30px;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 30px;
+  color: #fc036f;
 }
 
 .Lists {

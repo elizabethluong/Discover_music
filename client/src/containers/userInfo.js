@@ -8,7 +8,7 @@ export default function UserInfo(props) {
     <div className="userInfo">
       {name ? (
         <h1>
-          Hi {name} 
+          Hi {name}, <p>Discover new music by genre</p>
         </h1>
       ) : null}
     </div>

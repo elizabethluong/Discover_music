@@ -43,6 +43,9 @@ export default class App extends Component {
 
   onSubmitHandler = event => {
     event.preventDefault();
+    if (this.state.selectGenres === "") {
+      alert("Type a genre in the search box!");
+    }
     let genre = this.state.selectGenres;
     const params = this.getHashParams();
     const token = params.code;

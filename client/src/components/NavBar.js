@@ -9,12 +9,11 @@ function Navbar() {
         <div className="container">
           <div className="navbar-brand">
             <a className="navbar-item">
-              <Link to="/homepage">
-                {" "}
+              <Link to="/dash">
                 <img
                   src="https://ph-files.imgix.net/653154fb-1c09-432f-8005-8a5ae8298079?auto=format&auto=compress&codec=mozjpeg&cs=strip&w=760&h=380&fit=max"
                   alt="Logo"
-                />
+                /><p>Discover Music</p>
               </Link>
             </a>
             <span
@@ -29,7 +28,7 @@ function Navbar() {
           <div id="navbarMenuHeroA" className="navbar-menu">
             <div className="navbar-end">
               <a className="navbar-item is-active is-dark">
-                <Link to="/">HOME</Link>
+                <Link to="/dash">HOME</Link>
               </a>
               {/* <a className="navbar-item">
                 <Link to="/user_profile">Profile</Link>
