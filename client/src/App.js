@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { animateScroll } from "react-scroll";
 import "./App.css";
 import NotFound from "./components/NotFound";
 import NavBar from "./components/NavBar";
@@ -58,7 +59,8 @@ export default class App extends Component {
       .catch(err => {
         console.log(err);
       });
-    window.scrollBy(0, 500, )
+    // window.scrollBy(0, 500, )
+    animateScroll.scrollToBottom()
   };
 
   getHashParams() {
