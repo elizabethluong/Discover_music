@@ -31,13 +31,13 @@ function Navbar() {
               <a className="navbar-item is-active is-dark">
                 <Link to="/">HOME</Link>
               </a>
-              <a className="navbar-item">
+              {/* <a className="navbar-item">
                 <Link to="/user_profile">Profile</Link>
-              </a>
+              </a> */}
               <span className="navbar-item">
                 <a className="button is-danger is-inverted">
                   <span>
-                    <Link to="/logout">logout</Link>
+                    <Link to="/">logout</Link>
                   </span>
                 </a>
               </span>

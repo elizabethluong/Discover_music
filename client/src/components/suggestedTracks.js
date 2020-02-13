@@ -3,17 +3,15 @@ import { Link } from "react-router-dom";
 
 export default function suggestedTracks(props) {
   let suggestedTracks = props.state.returnTracks;
-
   return (
     <div className="artists">
       {suggestedTracks.length > 1
         ? suggestedTracks.map(item => (
-            <a href={item.album.uri}>
-                {console.log(item.album.uri)}
-              <div class="tile is-ancestor">
-                <div class="tile is-parent">
-                  <article class="tile is-child box">
-                    <div
+            <a key={item.id} href={item.album.uri}>
+              <div key={item.id} className="tile is-ancestor">
+                <div key={item.id} className="tile is-parent">
+                  <article key={item.id} className="tile is-child box">
+                    <div key={item.id}
                       className="container backImage"
                       style={{
                         backgroundImage: `url(${item.album.images[0].url})`

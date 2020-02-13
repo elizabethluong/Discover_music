@@ -222,4 +222,4 @@ main.route("/logout")
 
 def logout():
     session.clear()
-    return 'True'
+    return redirect("http://localhost:3000/")

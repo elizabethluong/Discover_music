@@ -131,7 +131,6 @@ export default class App extends Component {
               <Hero />
               <Login log={this.handleSubmit} top={this.spotifyRedirect} />
             </Route>
-
             <Route path="/dash">
               <NavBar />
               <Hero />
@@ -142,7 +141,6 @@ export default class App extends Component {
                 addGenre={this.onSubmitHandler}
                 typeGenre={this.onChangeHandler}
               />
-
               <SuggestedTracks state={this.state} />
             </Route>
             <Route path="/user_profile">

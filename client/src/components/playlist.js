@@ -3,9 +3,7 @@ import App from "../App";
 
 export default function Playlist(props) {
   let playlists = props.playlists.playlists;
-
-  console.log(playlists);
-
+  // console.log(playlists);
   return (
     <div>
       <div className="Lists">

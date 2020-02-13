@@ -6,9 +6,7 @@ export default function Genre(props) {
   let inVal = props.state.selectGenres
   let aGenre = props.addGenre;
   let tGenre = props.typeGenre;
-
-  console.log({ props });
-
+  // console.log({ props });
   return (
     <div className="Genres">
       <form onSubmit={event => aGenre(event)}>
@@ -22,11 +20,10 @@ export default function Genre(props) {
         />
         <input type="submit" value="Submit" />
       </form>
-
       <datalist id="data">
         {genres.length > 1
           ? genres.map((genre, key) => (
-              <div>
+              <div key={genre} >
                 <option key={key} value={genre} /> )}
               </div>
             ))
