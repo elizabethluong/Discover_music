@@ -6,6 +6,7 @@ export default function Genre(props) {
   let inVal = props.state.selectGenres
   let aGenre = props.addGenre;
   let tGenre = props.typeGenre;
+
   // console.log({ props });
   return (
     <div className="Genres">

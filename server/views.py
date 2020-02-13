@@ -1,5 +1,5 @@
 from flask import Blueprint, g, flash, jsonify, request, redirect, session, url_for
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_manager, login_user, logout_user, login_required
 import ast
 from . import db
 from .models import User, Comment, Followed, Saved
@@ -9,6 +9,7 @@ from urllib.parse import quote
 from server.models import User, Comment
 from datetime import datetime as dt
 from flask_cors import CORS, cross_origin
+
 
 main = Blueprint('main', __name__)
 #  Client Keys
@@ -40,6 +41,9 @@ auth_query_parameters = {
     "client_id": CLIENT_ID
 }
 
+# @login_manager.user_loader
+# def user_loader(user_id):
+#     return 
 
 @main.route("/")
 def index():
@@ -217,7 +221,7 @@ def save_track(token, track_id, user_id):
     return "Saved track!"
 
 
-main.route("/logout")
+@main.route("/logout")
 def logout():
     session.clear()
     return redirect("http://localhost:3000/")

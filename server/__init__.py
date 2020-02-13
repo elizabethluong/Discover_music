@@ -6,7 +6,7 @@ db = SQLAlchemy()
 
 def create_app():
     app = Flask(__name__)
-    CORS(app, origins="http://localhost:", allow_headers=["Content-Type"])
+    CORS(app, allow_headers=["Content-Type"])
     app.config["CORS_HEADERS"] = "Content-Type"
     app.secret_key = "bhutsumutandarika"
 

@@ -36,7 +36,7 @@ function Navbar() {
               <span className="navbar-item">
                 <a className="button is-danger is-inverted">
                   <span>
-                    <Link to="/">logout</Link>
+                    <a href="http://localhost:5000/logout">logout</a>
                   </span>
                 </a>
               </span>
