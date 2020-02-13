@@ -31,6 +31,11 @@ export default class App extends Component {
     };
   }
 
+  handleSubmit = event => {
+    window.location.assign("http://localhost:5000/");
+    event.preventDefault();
+  };
+
   onChangeHandler = event => {
     event.preventDefault();
     this.setState({ selectGenres: event.target.value });
@@ -52,7 +57,6 @@ export default class App extends Component {
       });
     // alert("Getting tracks!");
     // let genreInput = event.target.value = ""
-
   };
 
   getHashParams() {
@@ -125,7 +129,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/">
               <Hero />
-              <Login />
+              <Login log={this.handleSubmit} top={this.spotifyRedirect} />
             </Route>
 
             <Route path="/dash">
