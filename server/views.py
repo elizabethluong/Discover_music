@@ -224,4 +224,4 @@ def save_track(token, track_id, user_id):
 @main.route("/logout")
 def logout():
     session.clear()
-    return redirect("http://localhost:3000/")
+    return redirect("https://accounts.spotify.com")
