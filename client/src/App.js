@@ -58,8 +58,7 @@ export default class App extends Component {
       .catch(err => {
         console.log(err);
       });
-    // alert("Getting tracks!");
-    // let genreInput = event.target.value = ""
+    window.scrollBy(0, 500, )
   };
 
   getHashParams() {
