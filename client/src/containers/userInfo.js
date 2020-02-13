@@ -7,10 +7,11 @@ export default function UserInfo(props) {
   console.log(name);
 
   return (
+
     <div className="userInfo">
       {name ? (
         <h1>
-          Hi {name} from {country}
+          Hi {name} 
         </h1>
       ) : null}
     </div>

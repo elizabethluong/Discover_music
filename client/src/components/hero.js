@@ -7,8 +7,8 @@ function Hero() {
       <section className="hero is-small is-dark is-bold has-bg-img">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">Primary bold title</h1>
-            <h2 className="subtitle">Primary bold subtitle</h2>
+            <h1 className="title">TRACK DISCOVERY</h1>
+            {/* <h2 className="subtitle">Primary bold subtitle</h2> */}
           </div>
         </div>
       </section>

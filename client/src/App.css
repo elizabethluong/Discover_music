@@ -11,10 +11,6 @@
   align-items: center;
 }
 
-h1 {
-  font-size: 20px;
-}
-
 input[type="text"] {
   text-align: center;
 }
@@ -30,9 +26,10 @@ input[type="submit"] {
 .userInfo {
   min-height: 100px;
   display: flex;
-  margin: auto;
+  margin: 30px;
   justify-content: center;
   align-items: center;
+  font-size: 50px;
 }
 
 .Lists {
@@ -53,7 +50,10 @@ input[type="submit"] {
   padding: 70px;
 }
 
-.has-bg-img { background: url('')center center; background-size:cover; }
+.has-bg-img {
+  background: url("") center center;
+  background-size: cover;
+}
 
 /* .artistName {
   margin: 30px;

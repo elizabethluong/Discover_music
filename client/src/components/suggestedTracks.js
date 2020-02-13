@@ -8,7 +8,8 @@ export default function suggestedTracks(props) {
     <div className="artists">
       {suggestedTracks.length > 1
         ? suggestedTracks.map(item => (
-            <Link to={item.album.extend_urls}>
+            <a href={item.album.uri}>
+                {console.log(item.album.uri)}
               <div class="tile is-ancestor">
                 <div class="tile is-parent">
                   <article class="tile is-child box">
@@ -22,7 +23,7 @@ export default function suggestedTracks(props) {
                   </article>
                 </div>
               </div>
-            </Link>
+            </a>
           ))
         : null}
     </div>
