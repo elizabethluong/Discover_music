@@ -4,7 +4,7 @@ import "react-bulma-components/dist/react-bulma-components.min.css";
 function Hero() {
   return (
     <div className="hero">
-      <section className="hero is-medium is-dark is-bold">
+      <section className="hero is-small is-dark is-bold has-bg-img">
         <div className="hero-body">
           <div className="container">
             <h1 className="title">Primary bold title</h1>

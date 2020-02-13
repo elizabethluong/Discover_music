@@ -2,10 +2,40 @@
   text-align: center;
 }
 
+.Genres {
+  width: 600px;
+  min-height: 200px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
 
+h1 {
+  font-size: 20px;
+}
+
+input[type="text"] {
+  text-align: center;
+}
+
+input[type="submit"] {
+  border-radius: 5px;
+  width: 200px;
+  border: gray 1px solid;
+  box-shadow: 0 0 5px #999999;
+  padding: 5px 20px;
+}
+
+.userInfo {
+  min-height: 100px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
 
 .Lists {
-  background-color: #282c34;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,7 +50,23 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 40px;
+  padding: 70px;
+}
+
+.has-bg-img { background: url('')center center; background-size:cover; }
+
+/* .artistName {
+  margin: 30px;
+  background-color: black;
+  opacity: 0.6;
+} */
+
+.artists {
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .App-logo {
@@ -35,7 +81,6 @@
 }
 
 .App-header {
-  
   font-size: calc(10px + 2vmin);
   color: white;
 }

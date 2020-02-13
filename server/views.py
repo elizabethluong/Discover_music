@@ -25,7 +25,7 @@ SPOTIFY_API_URL = "{}/{}".format(SPOTIFY_API_BASE_URL, API_VERSION)
 # Server-side Parameters
 CLIENT_SIDE_URL = "http://127.0.0.1"
 PORT = 5000
-REDIRECT_URI = "{}:{}/callback/".format(CLIENT_SIDE_URL, PORT)
+REDIRECT_URI = "{}:{}/api/callback/".format(CLIENT_SIDE_URL, PORT)
 SCOPE = "user-read-private playlist-read-private user-read-email user-top-read"
 STATE = ""
 SHOW_DIALOG_bool = True
@@ -49,7 +49,8 @@ def index():
     auth_url = "{}/?{}".format(SPOTIFY_AUTH_URL, url_args)
     return redirect(auth_url)
 
-@main.route("/callback/")
+
+@main.route("/api/callback/")
 def callback():
     session.clear()
     # Auth Step 4: Requests refresh and access tokens

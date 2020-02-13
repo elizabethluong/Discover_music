@@ -28,7 +28,7 @@ function Navbar() {
           </div>
           <div id="navbarMenuHeroA" className="navbar-menu">
             <div className="navbar-end">
-              <a className="navbar-item is-active">
+              <a className="navbar-item is-active is-dark">
                 <Link to="/">HOME</Link>
               </a>
               <a className="navbar-item">

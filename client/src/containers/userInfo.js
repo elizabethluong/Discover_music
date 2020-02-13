@@ -1,5 +1,4 @@
 import React from "react";
-import App from "../App";
 
 export default function UserInfo(props) {
   let name = props.state.name;
@@ -8,7 +7,7 @@ export default function UserInfo(props) {
   console.log(name);
 
   return (
-    <div>
+    <div className="userInfo">
       {name ? (
         <h1>
           Hi {name} from {country}

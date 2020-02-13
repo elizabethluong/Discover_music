@@ -6,11 +6,11 @@ import NavBar from "./components/NavBar";
 import Login from "./components/login";
 import Hero from "./components/hero";
 import Genre from "./components/genre";
-import Artists from "./components/artists";
 import GenreDropDown from "./components/GenreDropDown";
 import ArtistList from "./components/ArtistList";
 import UserInfo from "./containers/userInfo";
 import Playlist from "./components/playlist";
+import SuggestedTracks from "./components/suggestedTracks";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "react-bulma-components/dist/react-bulma-components.min.css";
 
@@ -127,17 +127,18 @@ export default class App extends Component {
               <Login />
             </Route>
 
-            <Route path="/dash/*">
+            <Route path="/dash">
               <NavBar />
               <Hero />
-              <Playlist playlists={this.state} />
+              {/* <Playlist playlists={this.state} /> */}
+              <UserInfo state={this.state} />
               <Genre
                 state={this.state}
                 addGenre={this.onSubmitHandler}
                 typeGenre={this.onChangeHandler}
               />
-              <UserInfo state={this.state} />
-              <Artists />
+
+              <SuggestedTracks state={this.state} />
             </Route>
             <Route path="/user_profile">
               <NavBar />
