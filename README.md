@@ -18,8 +18,13 @@
 3. Then run `pip install`
 4. Then run `npm install -g yarn`
 5. Then run `npm install react-scripts`
-6. In a new terminal run `yarn start` in the root directory.
-7. Login with using you Spotify details
+6. Then run `npm install axios`
+7. Then run `npm install react`
+8. Then run `npm install react-dom`
+9. Then run `npm install react-router-dom`
+10. Then run `npm install react-scroll`
+11.. In a new terminal run `yarn start` in the root directory.
+12. Login with using you Spotify details
 
 ## Brief
 
