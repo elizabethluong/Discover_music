@@ -24,7 +24,7 @@
 9. Then run `npm install react-router-dom`
 10. Then run `npm install react-scroll`
 11.. In a new terminal run `yarn start` in the root directory.
-12. Login with using you Spotify details
+12. Login with using your Spotify details
 
 ## Brief
 
