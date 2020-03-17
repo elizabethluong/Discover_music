@@ -15,16 +15,15 @@
 
 1. Open terminal and run `git clone`
 2. Then run `npm install`
-3. Then run `pip install`
-4. Then run `npm install -g yarn`
-5. Then run `npm install react-scripts`
-6. Then run `npm install axios`
-7. Then run `npm install react`
-8. Then run `npm install react-dom`
-9. Then run `npm install react-router-dom`
-10. Then run `npm install react-scroll`
-11.. In a new terminal run `yarn start` in the root directory.
-12. Login with using your Spotify details
+3. Then run `npm install -g yarn`
+4. Then run `npm install react-scripts`
+5. Then run `npm install axios`
+6. Then run `npm install react`
+7. Then run `npm install react-dom`
+8. Then run `npm install react-router-dom`
+9. Then run `npm install react-scroll`
+10.. In a new terminal run `yarn start` in the root directory.
+11. Login with using your Spotify details
 
 ## Brief
 
