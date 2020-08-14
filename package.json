@@ -7,7 +7,7 @@
     "concurrently": "^5.3.0"
   },
   "scripts": {
-    "client": "cd client && yarn start",
+    "client": "cd client && npm start",
     "server": "FLASK_APP=server flask run",
     "start": "concurrently \"yarn client\" \"yarn server\" "
   },
