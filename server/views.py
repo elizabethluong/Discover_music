@@ -5,10 +5,11 @@ from . import db
 from .models import User, Comment, Followed, Saved
 import json
 import requests
-from urllib.parse import quote
+import urllib.parse
 from server.models import User, Comment
 from datetime import datetime as dt
 from flask_cors import CORS, cross_origin
+import urllib.parse
 
 
 main = Blueprint('main', __name__)
@@ -48,7 +49,7 @@ auth_query_parameters = {
 @main.route("/")
 def index():
     # Auth Step 1: Authorization
-    url_args = "&".join(["{}={}".format(key, quote(val))
+    url_args = "&".join(["{}={}".format(key, (val))
                          for key, val in auth_query_parameters.items()])
     auth_url = "{}/?{}".format(SPOTIFY_AUTH_URL, url_args)
     return redirect(auth_url)
